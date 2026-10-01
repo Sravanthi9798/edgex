@@ -19,13 +19,10 @@ interface InputProps {
   inputStyle?: StyleProp<TextStyle>;
   textErrorStyle?: StyleProp<TextStyle>;
   textError?: string;
-
   onFocus?: TextInputProps['onFocus'];
   onBlur?: TextInputProps['onBlur'];
-
   renderRightIcon?: React.ReactNode;
   renderLeftIcon?: React.ReactNode;
-
   maxLength?: number;
   value?: string;
   placeholder?: string;

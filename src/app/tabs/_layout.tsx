@@ -6,47 +6,31 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-
-        tabBarActiveTintColor: '#003B7A',
-        tabBarInactiveTintColor: '#8A96A8',
-
+        tabBarActiveTintColor: '#063B86',
+        tabBarInactiveTintColor: '#718096',
         tabBarStyle: {
           height: 65,
-          paddingTop: 6,
           paddingBottom: 8,
-        },
-
-        tabBarLabelStyle: {
-          fontSize: 11,
+          paddingTop: 8,
         },
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           title: 'Home',
-
           tabBarIcon: ({ color, size }) => (
-            <Ionicons
-              name="home-outline"
-              size={size}
-              color={color}
-            />
+            <Ionicons name="home-outline" size={size} color={color} />
           ),
         }}
       />
 
       <Tabs.Screen
-        name="profile"
+        name="history"
         options={{
-          title: 'Profile',
-
+          title: 'History',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons
-              name="person-outline"
-              size={size}
-              color={color}
-            />
+            <Ionicons name="time-outline" size={size} color={color} />
           ),
         }}
       />
@@ -54,14 +38,9 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="settings"
         options={{
-          title: 'Settings',
-
+          title: 'Settings',    
           tabBarIcon: ({ color, size }) => (
-            <Ionicons
-              name="settings-outline"
-              size={size}
-              color={color}
-            />
+            <Ionicons name="settings-outline" size={size} color={color} />
           ),
         }}
       />

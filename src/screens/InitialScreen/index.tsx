@@ -83,8 +83,8 @@ export default function InitialScreen() {
       </View>
 
       {/* Bottom blue waves */}
-      <View style={styles.bottomWaveOne} />
-      <View style={styles.bottomWaveTwo} />
+      {/* <View style={styles.bottomWaveOne} />
+      <View style={styles.bottomWaveTwo} /> */}
     </SafeAreaView>
   );
 }

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import Feather from '@expo/vector-icons/Feather';
-
+import Feather from "@expo/vector-icons/Feather";
+import { Checkbox } from "expo-checkbox";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 
@@ -13,12 +13,17 @@ import { useRouter } from "expo-router";
 export default function RegisterScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isChecked, setChecked] = useState(false);
   const router = useRouter();
 
   return (
     <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
       <View style={styles.content}>
-        <Pressable style={styles.backButton} onPress={() => router.push("/login")} hitSlop={10}>
+        <Pressable
+          style={styles.backButton}
+          onPress={() => router.push("/login")}
+          hitSlop={10}
+        >
           <Ionicons name="chevron-back" size={22} color="#122342" />
         </Pressable>
 
@@ -27,16 +32,13 @@ export default function RegisterScreen() {
             Edge
             <Text style={styles.logoBlue}>x</Text>
           </Text>
-
         </View>
 
         <Text style={styles.title}>Create Account</Text>
 
-        <Text style={styles.subtitle}>
-          Sign up to get started with Edgex
-        </Text>
+        <Text style={styles.subtitle}>Sign up to get started with Edgex</Text>
 
-                <View style={styles.fieldContainer}>
+        <View style={styles.fieldContainer}>
           <Text style={styles.label}>Full Name</Text>
 
           <Input
@@ -45,9 +47,7 @@ export default function RegisterScreen() {
             keyboardType="email-address"
             onChangeText={setEmail}
             inputContainerStyle={styles.inputContainer}
-            renderLeftIcon={
-              <Feather name="user" size={17} color="#718096"/>
-            }
+            renderLeftIcon={<Feather name="user" size={17} color="#718096" />}
           />
         </View>
 
@@ -78,9 +78,7 @@ export default function RegisterScreen() {
             renderLeftIcon={
               <Ionicons name="lock-closed-outline" size={17} color="#718096" />
             }
-             renderRightIcon={
-              <Ionicons name="eye" size={17} color="#718096" />
-            }
+            renderRightIcon={<Ionicons name="eye" size={17} color="#718096" />}
           />
         </View>
 
@@ -96,12 +94,20 @@ export default function RegisterScreen() {
             renderLeftIcon={
               <Ionicons name="lock-closed-outline" size={17} color="#718096" />
             }
-             renderRightIcon={
-              <Ionicons name="eye" size={17} color="#718096" />
-            }
+            renderRightIcon={<Ionicons name="eye" size={17} color="#718096" />}
           />
         </View>
-
+        <View style={styles.signupContainer}>
+          <Checkbox style={styles.checkbox} value={isChecked} onValueChange={setChecked} color="#718096" />
+          <Text style={styles.signupText}> I agree to the</Text>
+          <Pressable>
+            <Text style={styles.signupLink}>Terms of Service </Text>
+          </Pressable>
+          <Text style={styles.signupText}>and</Text>
+          <Pressable>
+            <Text style={styles.signupLink}>Privacy Policy</Text>
+          </Pressable>
+        </View>
         <Button
           text="Sign Up"
           style={styles.loginButton}
@@ -109,7 +115,7 @@ export default function RegisterScreen() {
           onPress={() => {}}
         />
 
-        <View style={styles.signupContainer}>
+        <View style={styles.signupContainerAccount}>
           <Text style={styles.signupText}>Already have an account?</Text>
 
           <Pressable onPress={() => router.push("/login")} hitSlop={10}>

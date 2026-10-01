@@ -5,13 +5,9 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     minHeight: normalize(48),
-
     paddingHorizontal: normalize(16),
-
     borderRadius: normalize(8),
-
     backgroundColor: '#003B7A',
-
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -27,17 +23,14 @@ const styles = StyleSheet.create({
 
   secondary: {
     backgroundColor: '#FFFFFF',
-
     borderWidth: 1,
     borderColor: '#003B7A',
   },
 
   text: {
     color: '#FFFFFF',
-
     fontSize: normalize(14),
     fontWeight: '600',
-
     textAlign: 'center',
   },
 
@@ -47,7 +40,6 @@ const styles = StyleSheet.create({
 
   iconContainer: {
     marginRight: normalize(8),
-
     alignItems: 'center',
     justifyContent: 'center',
   },

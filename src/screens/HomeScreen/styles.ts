@@ -4,15 +4,166 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f3f3",
-   
+    backgroundColor: "#FFFFFF",
   },
+
+  /* =========================
+     MAIN CONTENT
+  ========================= */
 
   content: {
     flex: 1,
-    alignItems:"center",
-    justifyContent:"center"
+    paddingHorizontal: normalize(20),
+    paddingTop: normalize(20),
   },
+
+  textContent: {
+    color: "#526783",
+    fontSize: normalize(16),
+    fontWeight: "500",
+    marginBottom: normalize(14),
+  },
+
+  /* =========================
+     ACTION CARDS
+  ========================= */
+
+  actionsContainer: {
+    width: "100%",
+    gap: normalize(10),
+  },
+
+  actionCard: {
+    width: "100%",
+    minHeight: normalize(72),
+
+    flexDirection: "row",
+    alignItems: "center",
+
+    backgroundColor: "#F7FAFF",
+
+    borderWidth: normalize(1),
+    borderColor: "#E0EAF6",
+
+    borderRadius: normalize(10),
+
+    paddingHorizontal: normalize(14),
+
+    shadowColor: "#174D8C",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.04,
+    shadowRadius: 3,
+
+    elevation: 1,
+  },
+
+  actionCardPressed: {
+    backgroundColor: "#EEF5FF",
+    transform: [{ scale: 0.99 }],
+  },
+
+  actionIconContainer: {
+    width: normalize(42),
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: normalize(10),
+  },
+
+  actionTextContainer: {
+    flex: 1,
+    justifyContent: "center",
+  },
+
+  actionTitle: {
+    color: "#102A54",
+    fontSize: normalize(14),
+    fontWeight: "700",
+    marginBottom: normalize(3),
+  },
+
+  actionSubtitle: {
+    color: "#70819A",
+    fontSize: normalize(11),
+    fontWeight: "400",
+  },
+
+  /* =========================
+     MORE BUTTON
+  ========================= */
+
+  moreButton: {
+    width: "100%",
+    height: normalize(44),
+
+    marginTop: normalize(14),
+
+    backgroundColor: "#FFFFFF",
+
+    borderWidth: normalize(1.5),
+    borderColor: "#527EBA",
+
+    borderRadius: normalize(8),
+
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  moreButtonPressed: {
+    backgroundColor: "#F2F7FD",
+  },
+
+  moreText: {
+    color: "#123D78",
+    fontSize: normalize(13),
+    fontWeight: "700",
+  },
+
+  /* =========================
+     BOTTOM NAVIGATION
+  ========================= */
+
+  bottomNavigation: {
+    height: normalize(64),
+
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+
+    backgroundColor: "#FFFFFF",
+
+    borderTopWidth: normalize(1),
+    borderTopColor: "#EEF1F5",
+
+    paddingHorizontal: normalize(20),
+  },
+
+  bottomNavItem: {
+    flex: 1,
+
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  bottomNavText: {
+    marginTop: normalize(3),
+
+    color: "#687991",
+
+    fontSize: normalize(10),
+    fontWeight: "500",
+  },
+
+  activeNavText: {
+    color: "#096CF2",
+    fontWeight: "700",
+  },
+
+  /* =========================
+     OLD / OPTIONAL STYLES
+  ========================= */
 
   backButton: {
     position: "absolute",
@@ -75,50 +226,6 @@ export const styles = StyleSheet.create({
     lineHeight: normalize(18),
   },
 
-  fieldContainer: {
-    marginTop: normalize(18),
-  },
-
-  label: {
-    marginBottom: normalize(6),
-    color: "#17243A",
-    fontSize: normalize(12),
-    fontWeight: "500",
-  },
-
-  inputContainer: {
-    height: normalize(48),
-    borderWidth: 1,
-    borderColor: "#D9E0E8",
-    borderRadius: normalize(8),
-    backgroundColor: "#FFFFFF",
-  },
-
-  inputIcon: {
-    color: "#718096",
-    fontSize: normalize(17),
-    width: normalize(20),
-    textAlign: "center",
-  },
-
-  eyeIcon: {
-    color: "#718096",
-    fontSize: normalize(14),
-    width: normalize(20),
-    textAlign: "center",
-  },
-
-  forgotContainer: {
-    alignSelf: "flex-end",
-    marginTop: normalize(9),
-  },
-
-  forgotText: {
-    color: "#006EFF",
-    fontSize: normalize(11),
-    fontWeight: "500",
-  },
-
   loginButton: {
     height: normalize(48),
     marginTop: normalize(18),
@@ -137,71 +244,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: normalize(17),
     marginBottom: normalize(17),
-  },
-
-  orLine: {
-    flex: 1,
-    height: normalize(1),
-    backgroundColor: "#E1E5EA",
-  },
-
-  orText: {
-    marginHorizontal: normalize(14),
-    color: "#687586",
-    fontSize: normalize(11),
-    fontWeight: "400",
-  },
-
-  microsoftButton: {
-    height: normalize(48),
-    backgroundColor: "#FFFFFF",
-    borderWidth: normalize(1),
-    borderColor: "#B8C4D2",
-    borderRadius: normalize(8),
-  },
-
-  microsoftButtonText: {
-    color: "#18263A",
-    fontSize: normalize(13),
-    fontWeight: "500",
-  },
-
-  microsoftIcon: {
-    width: normalize(18),
-    height: normalize(18),
-    flexDirection: "row",
-    flexWrap: "wrap",
-    marginRight: normalize(2),
-  },
-
-  microsoftSquare: {
-    width: normalize(7),
-    height: normalize(7),
-    marginRight: normalize(1),
-    marginBottom: normalize(1),
-  },
-
-  red: {
-    backgroundColor: "#F25022",
-  },
-
-  green: {
-    backgroundColor: "#7FBA00",
-  },
-
-  blue: {
-    backgroundColor: "#00A4EF",
-  },
-
-  yellow: {
-    backgroundColor: "#FFB900",
-  },
-
-  signupContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: normalize(22),
   },
 
   signupText: {

@@ -25,7 +25,6 @@ export const styles = StyleSheet.create({
     fontSize: normalize(50),
     fontWeight: '800',
     color: '#062F6E',
-    letterSpacing: normalize(-2),
   },
 
   logoBlue: {
@@ -75,17 +74,17 @@ export const styles = StyleSheet.create({
   },
 
   // Building
-  imageContainer: {
-    height: height * 0.27,
-    marginHorizontal: normalize(-28),
-    marginTop: normalize(18),
-    overflow: 'hidden',
-  },
+  // imageContainer: {
+  //   height: height * 0.27,
+  //   marginHorizontal: normalize(-28),
+  //   marginTop: normalize(18),
+  //   overflow: 'hidden',
+  // },
 
-  buildingImage: {
-    width: '100%',
-    height: '100%',
-  },
+  // buildingImage: {
+  //   width: '100%',
+  //   height: '100%',
+  // },
 
   // Buttons
   buttonsContainer: {
@@ -125,34 +124,34 @@ export const styles = StyleSheet.create({
   },
 
   // Bottom waves
-  bottomWaveOne: {
-    position: 'absolute',
-    bottom: normalize(-75),
-    left: normalize(-80),
-    width: width * 0.9,
-    height: normalize(120),
-    borderRadius: normalize(100),
-    backgroundColor: '#063B86',
-    transform: [
-      {
-        rotate: '8deg',
-      },
-    ],
-  },
+  // bottomWaveOne: {
+  //   position: 'absolute',
+  //   bottom: normalize(-75),
+  //   left: normalize(-80),
+  //   width: width * 0.9,
+  //   height: normalize(120),
+  //   borderRadius: normalize(100),
+  //   backgroundColor: '#063B86',
+  //   transform: [
+  //     {
+  //       rotate: '8deg',
+  //     },
+  //   ],
+  // },
 
-  bottomWaveTwo: {
-    position: 'absolute',
-    bottom: normalize(-90),
-    right: normalize(-80),
-    width: width * 0.9,
-    height: normalize(110),
-    borderRadius: normalize(100),
-    backgroundColor: '#42A5F5',
-    transform: [
-      {
-        rotate: '-8deg',
-      },
-    ],
-  },
+  // bottomWaveTwo: {
+  //   position: 'absolute',
+  //   bottom: normalize(-90),
+  //   right: normalize(-80),
+  //   width: width * 0.9,
+  //   height: normalize(110),
+  //   borderRadius: normalize(100),
+  //   backgroundColor: '#42A5F5',
+  //   transform: [
+  //     {
+  //       rotate: '-8deg',
+  //     },
+  //   ],
+  // },
 
 });

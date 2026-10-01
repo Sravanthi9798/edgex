@@ -196,11 +196,13 @@ export const styles = StyleSheet.create({
 
   signupContainer: {
     flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
     marginTop: normalize(22),
   },
-
+  signupContainerAccount: {
+    flexDirection: "row",
+    marginTop: normalize(22),
+    justifyContent:"center"
+  },
   signupText: {
     color: "#4D5968",
     fontSize: normalize(11),
@@ -212,4 +214,10 @@ export const styles = StyleSheet.create({
     fontSize: normalize(11),
     fontWeight: "500",
   },
+  checkbox:{
+    // margin: normalize(5),
+    width:16,
+    height:16,
+    color:"#006EFF"
+  }
 });
