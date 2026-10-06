@@ -2,7 +2,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { Pressable, Text, View } from "react-native";
 import { styles } from "./styles";
 
-
 type ActionCardProps = {
   icon: keyof typeof Ionicons.glyphMap;
   title: string;

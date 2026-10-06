@@ -50,7 +50,7 @@ export default function HomeScreen() {
             icon="search"
             title="Look Up Asset"
             subtitle="Search by asset ID / tag"
-            onPress={()=>{}}
+            onPress={() => router.push("/lookupAssert")}
           />
 
           {/* Assign Tag */}
@@ -58,7 +58,7 @@ export default function HomeScreen() {
             icon="pricetag"
             title="Assign Tag"
             subtitle="Assign a new edgex tag"
-            onPress={()=>{}}
+            onPress={() => router.push("/assignTag")}
           />
 
           {/* Replace Tag */}
@@ -66,7 +66,7 @@ export default function HomeScreen() {
             icon="sync"
             title="Replace Tag"
             subtitle="Replace an existing tag"
-            onPress={()=>{}}
+            onPress={() => router.push("/replaceTag")}
           />
         </View>
 
