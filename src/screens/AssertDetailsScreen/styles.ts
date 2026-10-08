@@ -54,43 +54,134 @@ export const styles = StyleSheet.create({
     fontWeight: "700",
   },
 
-  primaryButton: {
-    height: normalize(45),
-    marginTop: normalize(14),
-    borderRadius: normalize(9),
-    backgroundColor: "#0753A8",
+  /* =========================
+     STATUS
+  ========================= */
+
+  statusCard: {
+    flexDirection: "row",
     alignItems: "center",
+    marginTop: normalize(16),
+    padding: normalize(14),
+    borderRadius: normalize(10),
+  },
+
+  assignedStatus: {
+    backgroundColor: "#E8F7EE",
+  },
+
+  notAssignedStatus: {
+    backgroundColor: "#FFF7E6",
+  },
+
+  statusText: {
+    marginLeft: normalize(10),
+    fontSize: normalize(13),
+    fontWeight: "600",
+  },
+
+  assignedStatusText: {
+    color: "#16803C",
+  },
+
+  notAssignedStatusText: {
+    color: "#D97706",
+  },
+
+  /* =========================
+     SCANNED TAG
+  ========================= */
+
+  scannedCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: normalize(16),
+    padding: normalize(15),
+    borderRadius: normalize(10),
+    backgroundColor: "#E8F7EE",
+    borderWidth: 1,
+    borderColor: "#B8E4C7",
+  },
+
+  scannedContent: {
+    marginLeft: normalize(10),
+  },
+
+  scannedTitle: {
+    color: "#16803C",
+    fontSize: normalize(13),
+    fontWeight: "600",
+  },
+
+  scannedTag: {
+    marginTop: normalize(3),
+    color: "#102D58",
+    fontSize: normalize(15),
+    fontWeight: "700",
+  },
+
+  /* =========================
+     BUTTONS
+  ========================= */
+
+  buttonsContainer: {
+    marginTop: normalize(10),
+    gap: normalize(9),
+    paddingBottom: normalize(60),
+  },
+
+  assignTagButton: {
+    height: normalize(46),
+    borderRadius: normalize(9),
+    backgroundColor: "#063B86",
     justifyContent: "center",
+    alignItems: "center",
   },
 
-  primaryButtonPressed: {
-    backgroundColor: "#06458C",
-  },
-
-  primaryButtonText: {
+  assignTagText: {
     color: "#FFFFFF",
     fontSize: normalize(14),
     fontWeight: "700",
   },
 
-  secondaryButton: {
-    height: normalize(45),
-    marginTop: normalize(10),
+  replaceButton: {
+    height: normalize(46),
     borderRadius: normalize(9),
-    borderWidth: 1.5,
-    borderColor: "#1269E8",
     backgroundColor: "#FFFFFF",
-    alignItems: "center",
+    borderWidth: normalize(1.5),
+    borderColor: "#6B91C4",
     justifyContent: "center",
+    alignItems: "center",
   },
 
-  secondaryButtonPressed: {
-    backgroundColor: "#F2F7FF",
-  },
-
-  secondaryButtonText: {
-    color: "#123F83",
+  replaceText: {
+    color: "#063B86",
     fontSize: normalize(14),
     fontWeight: "700",
+  },
+
+  /* =========================
+     NOT FOUND
+  ========================= */
+
+  notFoundContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: normalize(30),
+  },
+
+  notFoundTitle: {
+    fontSize: normalize(18),
+    fontWeight: "600",
+    marginTop: normalize(15),
+    color: "#102A54",
+  },
+
+  notFoundText: {
+    color: "#718096",
+    marginTop: normalize(8),
+    textAlign: "center",
+    fontSize: normalize(13),
   },
 });

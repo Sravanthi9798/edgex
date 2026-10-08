@@ -1,5 +1,5 @@
-import { normalize } from "@/constants/normalize";
 import { StyleSheet } from "react-native";
+import { normalize } from "@/constants/normalize";
 
 export const styles = StyleSheet.create({
   container: {
@@ -23,7 +23,6 @@ export const styles = StyleSheet.create({
     marginTop: normalize(3),
     color: "#70819A",
     fontSize: normalize(13),
-    fontWeight: "400",
   },
 
   detailsCard: {
@@ -32,13 +31,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: normalize(14),
     paddingVertical: normalize(12),
     backgroundColor: "#FFFFFF",
-    borderWidth: normalize(1),
+    borderWidth: 1,
     borderColor: "#DCE7F4",
     borderRadius: normalize(10),
   },
 
   detailRow: {
-    minHeight: normalize(40),
+    minHeight: normalize(42),
     flexDirection: "row",
     alignItems: "center",
   },
@@ -47,7 +46,6 @@ export const styles = StyleSheet.create({
     flex: 1,
     color: "#8291A5",
     fontSize: normalize(12),
-    fontWeight: "400",
   },
 
   detailValue: {
@@ -57,45 +55,39 @@ export const styles = StyleSheet.create({
     fontWeight: "700",
   },
 
-  primaryButton: {
-    width: "100%",
-    height: normalize(45),
-    marginTop: normalize(14),
-    backgroundColor: "#0753A8",
-    borderRadius: normalize(8),
-    alignItems: "center",
+  buttonsContainer: {
+    marginTop: normalize(20),
+    gap: normalize(9),
+    paddingBottom: normalize(60),
+  },
+
+  confirmButton: {
+    height: normalize(46),
+    borderRadius: normalize(9),
+    backgroundColor: "#063B86",
     justifyContent: "center",
+    alignItems: "center",
   },
 
-  primaryButtonPressed: {
-    backgroundColor: "#06458C",
-  },
-
-  primaryButtonText: {
+  confirmText: {
     color: "#FFFFFF",
-    fontSize: normalize(13),
+    fontSize: normalize(14),
     fontWeight: "700",
   },
 
-  secondaryButton: {
-    width: "100%",
-    height: normalize(45),
-    marginTop: normalize(10),
+  cancelButton: {
+    height: normalize(46),
+    borderRadius: normalize(9),
     backgroundColor: "#FFFFFF",
     borderWidth: normalize(1.5),
-    borderColor: "#1269E8",
-    borderRadius: normalize(8),
-    alignItems: "center",
+    borderColor: "#6B91C4",
     justifyContent: "center",
+    alignItems: "center",
   },
 
-  secondaryButtonPressed: {
-    backgroundColor: "#F2F7FF",
-  },
-
-  secondaryButtonText: {
-    color: "#123F83",
-    fontSize: normalize(13),
+  cancelText: {
+    color: "#063B86",
+    fontSize: normalize(14),
     fontWeight: "700",
   },
 });

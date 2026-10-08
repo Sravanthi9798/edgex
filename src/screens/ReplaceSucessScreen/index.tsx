@@ -6,6 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/Header";
 import { normalize } from "@/constants/normalize";
 import { styles } from "./styles";
+import Button from "@/components/Button";
 
 export default function ReplaceSuccessScreen() {
   const params = useLocalSearchParams<{
@@ -29,7 +30,7 @@ export default function ReplaceSuccessScreen() {
   return (
     <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
       <Header
-        title="edgex"
+        title="edgeX"
         onBackPress={() => router.back()}
         leftIcon={
           <Ionicons name="chevron-back" size={normalize(24)} color="#FFFFFF" />
@@ -53,7 +54,7 @@ export default function ReplaceSuccessScreen() {
 
           {/* New Tag */}
           <View style={styles.detailRow}>
-            <Text style={styles.detailLabel}>edgex Tag</Text>
+            <Text style={styles.detailLabel}>edgeX Tag</Text>
 
             <Text style={styles.detailValue}>{edgexTag}</Text>
           </View>
@@ -65,34 +66,21 @@ export default function ReplaceSuccessScreen() {
             <Text style={styles.detailValue}>{status}</Text>
           </View>
         </View>
-
-        {/* =========================
-            CONFIRM BUTTON
-        ========================= */}
-
-        <Pressable
-          style={({ pressed }) => [
-            styles.primaryButton,
-            pressed && styles.primaryButtonPressed,
-          ]}
+        <View style={styles.buttonsContainer}>
+        <Button
+          text="View Asset"
+          style={styles.viewAssetButton}
+          textStyle={styles.viewAssetButtonText}
           onPress={handleConfirmAssignment}
-        >
-          <Text style={styles.primaryButtonText}>View Asset</Text>
-        </Pressable>
+        />
 
-        {/* =========================
-            CANCEL BUTTON
-        ========================= */}
-
-        <Pressable
-          style={({ pressed }) => [
-            styles.secondaryButton,
-            pressed && styles.secondaryButtonPressed,
-          ]}
+         <Button
+          text="Back to Home"
+          style={styles.backToButton}
+          textStyle={styles.backToButtonText}
           onPress={handlebackHome}
-        >
-          <Text style={styles.secondaryButtonText}>Back to Home</Text>
-        </Pressable>
+        />
+        </View>
       </View>
     </SafeAreaView>
   );

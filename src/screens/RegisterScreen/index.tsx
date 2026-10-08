@@ -30,13 +30,13 @@ export default function RegisterScreen() {
         <View style={styles.logoContainer}>
           <Text style={styles.logoText}>
             Edge
-            <Text style={styles.logoBlue}>x</Text>
+            <Text style={styles.logoBlue}>X</Text>
           </Text>
         </View>
 
         <Text style={styles.title}>Create Account</Text>
 
-        <Text style={styles.subtitle}>Sign up to get started with Edgex</Text>
+        <Text style={styles.subtitle}>Sign up to get started with EdgeX</Text>
 
         <View style={styles.fieldContainer}>
           <Text style={styles.label}>Full Name</Text>

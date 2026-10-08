@@ -225,4 +225,20 @@ export const styles = StyleSheet.create({
     fontSize: normalize(11),
     fontWeight: "500",
   },
+    moreButtons: {
+    height: normalize(46),
+    borderRadius: normalize(9),
+    backgroundColor: '#FFFFFF',
+    borderWidth: normalize(1.5),
+    borderColor: '#6B91C4',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop:normalize(10)
+  },
+
+  moreButtonText: {
+    color: '#063B86',
+    fontSize: normalize(14),
+    fontWeight: '700',
+  },
 });

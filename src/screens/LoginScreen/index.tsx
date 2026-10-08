@@ -29,14 +29,14 @@ export default function LoginScreen() {
         <View style={styles.logoContainer}>
           <Text style={styles.logoText}>
             Edge
-            <Text style={styles.logoBlue}>x</Text>
+            <Text style={styles.logoBlue}>X</Text>
           </Text>
         </View>
 
         <Text style={styles.title}>Welcome Back</Text>
 
         <Text style={styles.subtitle}>
-          Sign in to your Edgex account{"\n"}
+          Sign in to your EdgeX account{"\n"}
           to continue
         </Text>
 

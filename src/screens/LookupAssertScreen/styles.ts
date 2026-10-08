@@ -346,4 +346,16 @@ cameraBottomText: {
   fontSize: normalize(13),
   textAlign: "center",
 },
+   lookUpButton: {
+    height: normalize(48),
+    marginTop: normalize(18),
+    backgroundColor: "#003B7A",
+    borderRadius: normalize(8),
+  },
+
+  lookUpButtonText: {
+    color: "#FFFFFF",
+    fontSize: normalize(14),
+    fontWeight: "600",
+  },
 });

@@ -1,11 +1,15 @@
-import { Stack } from 'expo-router';
+import { Stack } from "expo-router";
+
+import { AssetProvider } from "@/context/AssetContext";
 
 export default function RootLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    />
+    <AssetProvider>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      />
+    </AssetProvider>
   );
 }

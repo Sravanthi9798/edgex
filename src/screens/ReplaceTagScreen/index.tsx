@@ -1,16 +1,12 @@
 import { Ionicons } from "@expo/vector-icons";
 import { router, useLocalSearchParams } from "expo-router";
-import {
-  Pressable,
-  ScrollView,
-  Text,
-  View,
-} from "react-native";
+import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import Header from "@/components/Header";
 import { styles } from "./styles";
 import { normalize } from "@/constants/normalize";
+import Button from "@/components/Button";
 
 export default function ReplaceTagScreen() {
   const params = useLocalSearchParams<{
@@ -19,29 +15,23 @@ export default function ReplaceTagScreen() {
   }>();
 
   const assetId = params.assetId || "AS1-10243";
-//     const handleScanTag = () => {
-//     router.push({
-//       pathname: "/replaceSuccess",
-//       params: {
-//         assetId: "AS1-10243",
-//         oldTag: "EDG-000321",
-//         newTag: "EDG-000784",
-//       },
-//     });
-//   };
+  //     const handleScanTag = () => {
+  //     router.push({
+  //       pathname: "/replaceSuccess",
+  //       params: {
+  //         assetId: "AS1-10243",
+  //         oldTag: "EDG-000321",
+  //         newTag: "EDG-000784",
+  //       },
+  //     });
+  //   };
 
   return (
     <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
       <Header
-        title="edgex"
+        title="edgeX"
         onBackPress={() => router.back()}
-        leftIcon={
-          <Ionicons
-            name="chevron-back"
-            size={24}
-            color="#FFFFFF"
-          />
-        }
+        leftIcon={<Ionicons name="chevron-back" size={24} color="#FFFFFF" />}
         showRightButton={false}
       />
 
@@ -50,30 +40,17 @@ export default function ReplaceTagScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* Title */}
-        <Text style={styles.heading}>
-          Replace edgex tag
-        </Text>
+        <Text style={styles.heading}>Replace edgeX tag</Text>
 
-        <Text style={styles.description}>
-          Existing tag detected
-        </Text>
+        <Text style={styles.description}>Existing tag detected</Text>
 
         {/* Asset Information */}
         <View style={styles.detailsCard}>
-          <DetailRow
-            label="Asset ID"
-            value={assetId}
-          />
+          <DetailRow label="Asset ID" value={assetId} />
 
-          <DetailRow
-            label="Current Tag"
-            value="EDG-000321"
-          />
+          <DetailRow label="Current Tag" value="EDG-000321" />
 
-          <DetailRow
-            label="Replacement"
-            value="Scan new tag"
-          />
+          <DetailRow label="Replacement" value="Scan new tag" />
         </View>
 
         <Pressable
@@ -81,7 +58,7 @@ export default function ReplaceTagScreen() {
             styles.scanCard,
             pressed && styles.scanCardPressed,
           ]}
-        //   onPress={handleScanTag}
+          //   onPress={handleScanTag}
         >
           <View style={styles.scanCorners}>
             <View style={styles.topLeft} />
@@ -96,23 +73,15 @@ export default function ReplaceTagScreen() {
             color="#1269E8"
           />
 
-          <Text style={styles.scanTitle}>
-            Scan QR / Tag
-          </Text>
+          <Text style={styles.scanTitle}>Scan QR / Tag</Text>
         </Pressable>
 
-        {/* Assign Tag */}
-        <Pressable
-          style={({ pressed }) => [
-            styles.primaryButton,
-            pressed && styles.primaryButtonPressed,
-          ]}
+        <Button
+          text="Replace Tag"
+          style={styles.replaceButton}
+          textStyle={styles.replaceButtonText}
           onPress={() => router.push("/replaceSucess")}
-        >
-          <Text style={styles.primaryButtonText}>
-            Replace Tag
-          </Text>
-        </Pressable>
+        />
       </ScrollView>
     </SafeAreaView>
   );
@@ -123,19 +92,12 @@ type DetailRowProps = {
   value: string;
 };
 
-function DetailRow({
-  label,
-  value,
-}: DetailRowProps) {
+function DetailRow({ label, value }: DetailRowProps) {
   return (
     <View style={styles.detailRow}>
-      <Text style={styles.detailLabel}>
-        {label}
-      </Text>
+      <Text style={styles.detailLabel}>{label}</Text>
 
-      <Text style={styles.detailValue}>
-        {value}
-      </Text>
+      <Text style={styles.detailValue}>{value}</Text>
     </View>
   );
 }

@@ -1,4 +1,4 @@
-import { Pressable, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
@@ -6,43 +6,29 @@ import { router } from "expo-router";
 import { styles } from "./styles";
 import Header from "@/components/Header";
 import ActionCard from "@/components/ActionCard";
+import Button from "@/components/Button";
 
 // Keeps icon sizes proportional to your existing normalize system.
 const normalizeIcon = (size: number) => size;
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView
-      style={styles.container}
-      edges={["top", "bottom"]}
-    >
+    <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
       {/* Header */}
       <Header
-        title="edgex"
+        title="edgeX"
         onBackPress={() => router.push("/login")}
         onRightPress={() => router.push("/register")}
-        leftIcon={
-          <Ionicons
-            name="chevron-back"
-            size={24}
-            color="#FFFFFF"
-          />
-        }
+        leftIcon={<Ionicons name="chevron-back" size={24} color="#FFFFFF" />}
         rightIcon={
-          <Ionicons
-            name="notifications-outline"
-            size={24}
-            color="#FFFFFF"
-          />
+          <Ionicons name="notifications-outline" size={24} color="#FFFFFF" />
         }
         showRightButton
       />
 
       {/* Main Content */}
       <View style={styles.content}>
-        <Text style={styles.textContent}>
-          What would you like to do?
-        </Text>
+        <Text style={styles.textContent}>What would you like to do?</Text>
 
         <View style={styles.actionsContainer}>
           {/* Look Up Asset */}
@@ -57,7 +43,7 @@ export default function HomeScreen() {
           <ActionCard
             icon="pricetag"
             title="Assign Tag"
-            subtitle="Assign a new edgex tag"
+            subtitle="Assign a new edgeX tag"
             onPress={() => router.push("/assignTag")}
           />
 
@@ -69,17 +55,12 @@ export default function HomeScreen() {
             onPress={() => router.push("/replaceTag")}
           />
         </View>
-
-        {/* More Button */}
-        <Pressable
-          style={({ pressed }) => [
-            styles.moreButton,
-            pressed && styles.moreButtonPressed,
-          ]}
-          onPress={() => router.push("/register")}
-        >
-          <Text style={styles.moreText}>More</Text>
-        </Pressable>
+        <Button
+          text="More"
+          style={styles.moreButtons}
+          textStyle={styles.moreButtonText}
+          onPress={() => {}}
+        />
       </View>
 
       {/* Bottom Navigation */}

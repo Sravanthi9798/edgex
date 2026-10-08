@@ -167,4 +167,16 @@ export const styles = StyleSheet.create({
     fontSize: normalize(14),
     fontWeight: "700",
   },
+    replaceButton: {
+    height: normalize(48),
+    marginTop: normalize(18),
+    backgroundColor: "#003B7A",
+    borderRadius: normalize(8),
+  },
+
+  replaceButtonText: {
+    color: "#FFFFFF",
+    fontSize: normalize(14),
+    fontWeight: "600",
+  },
 });

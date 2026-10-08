@@ -149,4 +149,36 @@ successCircle: {
     fontSize: normalize(13),
     fontWeight: "700",
   },
+      viewAssetButton: {
+    height: normalize(48),
+    marginTop: normalize(18),
+    backgroundColor: "#003B7A",
+    borderRadius: normalize(8),
+  },
+
+  viewAssetButtonText: {
+    color: "#FFFFFF",
+    fontSize: normalize(14),
+    fontWeight: "600",
+  },
+    buttonsContainer: {
+    // marginTop: 'auto',
+    gap: normalize(9),
+    paddingBottom: normalize(60),
+  },
+    backToButton: {
+    height: normalize(46),
+    borderRadius: normalize(9),
+    backgroundColor: '#FFFFFF',
+    borderWidth: normalize(1.5),
+    borderColor: '#6B91C4',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  backToButtonText: {
+    color: '#063B86',
+    fontSize: normalize(14),
+    fontWeight: '700',
+  },
 });

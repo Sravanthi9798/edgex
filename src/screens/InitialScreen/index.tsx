@@ -16,7 +16,7 @@ export default function InitialScreen() {
         <View style={styles.logoContainer}>
           <Text style={styles.logoText}>
             Edge
-            <Text style={styles.logoBlue}>x</Text>
+            <Text style={styles.logoBlue}>X</Text>
           </Text>
 
           <Text style={styles.subtitle}>
