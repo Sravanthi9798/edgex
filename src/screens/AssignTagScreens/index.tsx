@@ -28,6 +28,7 @@ import Header from "@/components/Header";
 import Button from "@/components/Button";
 
 import { normalize } from "@/constants/normalize";
+import Colors from "@/constants/Colors";
 
 import { styles } from "./styles";
 
@@ -186,7 +187,7 @@ export default function AssignTagScreen() {
           <Ionicons
             name="chevron-back"
             size={normalize(24)}
-            color="#FFFFFF"
+            color={Colors.White}
           />
         }
         showRightButton={false}
@@ -310,7 +311,7 @@ export default function AssignTagScreen() {
           <Ionicons
             name="camera-outline"
             size={normalize(30)}
-            color="#1269E8"
+            color={Colors.ScanAccent}
           />
 
           <Text
@@ -413,7 +414,7 @@ export default function AssignTagScreen() {
                 <Ionicons
                   name="close"
                   size={28}
-                  color="#FFFFFF"
+                  color={Colors.White}
                 />
               </Pressable>
 

@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native";
 import { normalize } from "@/constants/normalize";
+import Colors from "@/constants/Colors";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: Colors.White,
   },
 
   content: {
@@ -17,20 +18,20 @@ export const styles = StyleSheet.create({
   heading: {
     fontSize: normalize(24),
     fontWeight: "700",
-    color: "#102D58",
+    color: Colors.Heading,
   },
 
   description: {
     fontSize: normalize(14),
-    color: "#718096",
+    color: Colors.MutedText,
     marginTop: normalize(6),
     marginBottom: normalize(20),
   },
 
   assetCard: {
-    backgroundColor: "#F8FAFC",
+    backgroundColor: Colors.AssetCardBackground,
     borderWidth: 1,
-    borderColor: "#E2E8F0",
+    borderColor: Colors.AssetCardBorder,
     borderRadius: normalize(12),
     padding: normalize(16),
     marginBottom: normalize(20),
@@ -45,7 +46,7 @@ export const styles = StyleSheet.create({
 
   assetLabel: {
     fontSize: normalize(13),
-    color: "#718096",
+    color: Colors.MutedText,
   },
 
   assetValue: {
@@ -54,7 +55,7 @@ export const styles = StyleSheet.create({
     marginLeft: normalize(15),
     fontSize: normalize(14),
     fontWeight: "600",
-    color: "#102D58",
+    color: Colors.Heading,
   },
 
   currentTagValue: {
@@ -63,7 +64,7 @@ export const styles = StyleSheet.create({
     marginLeft: normalize(15),
     fontSize: normalize(14),
     fontWeight: "700",
-    color: "#D97706",
+    color: Colors.Warning,
   },
 
   /* =========================
@@ -73,16 +74,16 @@ export const styles = StyleSheet.create({
   scanCard: {
     height: normalize(190),
     borderWidth: 1,
-    borderColor: "#D8E1ED",
+    borderColor: Colors.ScanBorder,
     borderRadius: normalize(14),
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#F8FBFF",
+    backgroundColor: Colors.ScanBackground,
     position: "relative",
   },
 
   scanCardPressed: {
-    backgroundColor: "#EEF6FF",
+    backgroundColor: Colors.ScanPressedBackground,
   },
 
   scanCorners: {
@@ -101,7 +102,7 @@ export const styles = StyleSheet.create({
     height: normalize(25),
     borderTopWidth: 2,
     borderLeftWidth: 2,
-    borderColor: "#1269E8",
+    borderColor: Colors.ScanAccent,
   },
 
   topRight: {
@@ -112,7 +113,7 @@ export const styles = StyleSheet.create({
     height: normalize(25),
     borderTopWidth: 2,
     borderRightWidth: 2,
-    borderColor: "#1269E8",
+    borderColor: Colors.ScanAccent,
   },
 
   bottomLeft: {
@@ -123,7 +124,7 @@ export const styles = StyleSheet.create({
     height: normalize(25),
     borderBottomWidth: 2,
     borderLeftWidth: 2,
-    borderColor: "#1269E8",
+    borderColor: Colors.ScanAccent,
   },
 
   bottomRight: {
@@ -134,33 +135,33 @@ export const styles = StyleSheet.create({
     height: normalize(25),
     borderBottomWidth: 2,
     borderRightWidth: 2,
-    borderColor: "#1269E8",
+    borderColor: Colors.ScanAccent,
   },
 
   scanTitle: {
     marginTop: normalize(10),
     fontSize: normalize(16),
     fontWeight: "700",
-    color: "#102D58",
+    color: Colors.Heading,
   },
 
   scanDescription: {
     marginTop: normalize(4),
     fontSize: normalize(12),
-    color: "#718096",
+    color: Colors.MutedText,
   },
 
   enterTagButton: {
     marginTop: normalize(16),
     height: normalize(50),
     borderRadius: normalize(10),
-    backgroundColor: "#FFFFFF",
+    backgroundColor: Colors.White,
     borderWidth: 1,
-    borderColor: "#1269E8",
+    borderColor: Colors.ScanAccent,
   },
 
   enterTagText: {
-    color: "#1269E8",
+    color: Colors.ScanAccent,
     fontSize: normalize(15),
     fontWeight: "700",
   },
@@ -171,7 +172,7 @@ export const styles = StyleSheet.create({
 
   cameraContainer: {
     flex: 1,
-    backgroundColor: "#000000",
+    backgroundColor: Colors.Black,
   },
 
   camera: {
@@ -190,7 +191,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "rgba(0,0,0,0.45)",
+    backgroundColor: Colors.CameraOverlay,
   },
 
   cameraCloseButton: {
@@ -201,7 +202,7 @@ export const styles = StyleSheet.create({
   },
 
   cameraTitle: {
-    color: "#FFFFFF",
+    color: Colors.White,
     fontSize: normalize(17),
     fontWeight: "700",
   },
@@ -229,7 +230,7 @@ export const styles = StyleSheet.create({
     height: normalize(35),
     borderTopWidth: 3,
     borderLeftWidth: 3,
-    borderColor: "#FFFFFF",
+    borderColor: Colors.White,
   },
 
   scannerTopRight: {
@@ -240,7 +241,7 @@ export const styles = StyleSheet.create({
     height: normalize(35),
     borderTopWidth: 3,
     borderRightWidth: 3,
-    borderColor: "#FFFFFF",
+    borderColor: Colors.White,
   },
 
   scannerBottomLeft: {
@@ -251,7 +252,7 @@ export const styles = StyleSheet.create({
     height: normalize(35),
     borderBottomWidth: 3,
     borderLeftWidth: 3,
-    borderColor: "#FFFFFF",
+    borderColor: Colors.White,
   },
 
   scannerBottomRight: {
@@ -262,12 +263,12 @@ export const styles = StyleSheet.create({
     height: normalize(35),
     borderBottomWidth: 3,
     borderRightWidth: 3,
-    borderColor: "#FFFFFF",
+    borderColor: Colors.White,
   },
 
   scannerInstruction: {
     marginTop: normalize(20),
-    color: "#FFFFFF",
+    color: Colors.White,
     fontSize: normalize(13),
     textAlign: "center",
   },
@@ -277,11 +278,11 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: normalize(20),
-    backgroundColor: "rgba(0,0,0,0.45)",
+    backgroundColor: Colors.CameraOverlay,
   },
 
   cameraBottomText: {
-    color: "#FFFFFF",
+    color: Colors.White,
     fontSize: normalize(13),
     textAlign: "center",
   },

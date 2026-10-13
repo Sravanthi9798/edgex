@@ -10,6 +10,17 @@ const Colors = {
   buttonText: '#FFFFFF',
   borderBlue: '#003B7A',
   disabledBlue: '#A8B8C9',
+  Heading: '#102D58',
+  MutedText: '#718096',
+  AssetCardBackground: '#F8FAFC',
+  AssetCardBorder: '#E2E8F0',
+  Warning: '#D97706',
+  ScanBorder: '#D8E1ED',
+  ScanBackground: '#F8FBFF',
+  ScanPressedBackground: '#EEF6FF',
+  ScanAccent: '#1269E8',
+  Black: '#000000',
+  CameraOverlay: 'rgba(0,0,0,0.45)',
 };
 
 export default Colors;
